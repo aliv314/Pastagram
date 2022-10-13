@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B00E8B528F7E68C00925691 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00E8B428F7E68C00925691 /* CameraViewController.swift */; };
+		5B00E8B728F86B8C00925691 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00E8B628F86B8C00925691 /* PostCell.swift */; };
 		5B4CC61C28F5F446007AF6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CC61B28F5F446007AF6BF /* AppDelegate.swift */; };
 		5B4CC61E28F5F446007AF6BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CC61D28F5F446007AF6BF /* SceneDelegate.swift */; };
 		5B4CC62028F5F446007AF6BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CC61F28F5F446007AF6BF /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		5B00E8B428F7E68C00925691 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		5B00E8B628F86B8C00925691 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5B4CC61828F5F446007AF6BF /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4CC61B28F5F446007AF6BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4CC61D28F5F446007AF6BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				5B4CC63028F762BD007AF6BF /* LoginViewController.swift */,
 				5B4CC63228F762CA007AF6BF /* FeedViewController.swift */,
 				5B00E8B428F7E68C00925691 /* CameraViewController.swift */,
+				5B00E8B628F86B8C00925691 /* PostCell.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B00E8B728F86B8C00925691 /* PostCell.swift in Sources */,
 				5B4CC63128F762BD007AF6BF /* LoginViewController.swift in Sources */,
 				5B4CC62028F5F446007AF6BF /* ViewController.swift in Sources */,
 				5B4CC63328F762CA007AF6BF /* FeedViewController.swift in Sources */,

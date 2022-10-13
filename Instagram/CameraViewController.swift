@@ -7,11 +7,14 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate,
     UINavigationControllerDelegate{
 
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var commentField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,24 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
+        let post = PFObject(className: "post")
+        post["poster"] = PFUser.current()
+        post["caption"] = commentField.text
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        post["image"] = file
+        
+        post.saveInBackground{
+            (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+            }else{
+                print("\(String(describing: error))")
+            }
+        }
+
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
@@ -57,5 +78,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate,
         let scaledImage = image.af.imageScaled(to: size)
         
         imageView.image = scaledImage
+        
+        dismiss(animated: true, completion: nil)
     }
 }
